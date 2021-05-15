@@ -41,6 +41,9 @@ class Graph:
         # key as Currently Visit City
         # and value is City from which we are coming
 
+        #Here I'm Solving The Problem from Reverse Pattern.
+        #First I'm getting the end node and after that checking from where i'm coming from.
+
         if visited[endNode] == startNode:
             return [endNode, startNode]
         path = []
@@ -58,9 +61,6 @@ class Graph:
 
             current = queue.pop(0)
 
-            # Stop if we Reached
-            # if current == endNode:
-            #     return
 
             for adjecent_node in current.connected_nodes:
                 
